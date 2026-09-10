@@ -1,0 +1,18 @@
+[package]
+name = "scrub"
+version = "0.1.0"
+edition = "2021"
+description = "Streaming scrubber for Claude Code / Codex / Cursor agent terminal dumps — strips ANSI and spinner redraw bloat"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/drjlsmith10/agent-log-scrub"
+keywords = ["ansi", "cli", "logs", "agent", "terminal"]
+categories = ["command-line-utilities", "text-processing"]
+
+[[bin]]
+name = "scrub"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+strip-ansi-escapes = "0.2"
